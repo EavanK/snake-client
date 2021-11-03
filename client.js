@@ -19,9 +19,9 @@ const connect = () => {
     conn.write('Name: HSK');
 
     //a movement command with asynchronous function
-    setInterval(() => {
-      conn.write('Move: up');
-    }, 500);
+    // setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 500);
   });
   
 
