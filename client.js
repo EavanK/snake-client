@@ -17,10 +17,14 @@ const connect = () => {
     console.log('Successfully connected to game server');
     //send a message to server
     conn.write('Name: HSK');
+
+    //a movement command with asynchronous function
+    setInterval(() => {
+      conn.write('Move: up');
+    }, 500);
   });
-
-
   
+
   //Update the connect function to handle incoming data and console.log it for the player.
   conn.on('data', (data) => {
     console.log(data);
@@ -28,7 +32,6 @@ const connect = () => {
 
   return conn;
 };
-
 console.log('Connecting ...');
 connect();
 
