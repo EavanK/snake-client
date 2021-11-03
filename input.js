@@ -33,6 +33,18 @@ const handleUserInput = (key) => {
   if (key === 'd') {
     connection.write('Move: right');
   }
+  //send messages to other players
+  if (key === 'q') {
+    connection.write('Say: Hiii');
+  }
+  if (key === 'e') {
+    connection.write('Say: Help!!');
+  }
+  if (key === 'z') {
+    connection.write('Say: Chilling~');
+  }
+
+  
 };
 
 
