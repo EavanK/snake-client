@@ -14,8 +14,12 @@ const connect = () => {
   
   // code that does something when the connection is first established
   conn.on('connect', () => {
-    console.log('connected!');
+    console.log('Successfully connected to game server');
+    //send a message to server
+    conn.write('Name: HSK');
   });
+
+
   
   //Update the connect function to handle incoming data and console.log it for the player.
   conn.on('data', (data) => {
